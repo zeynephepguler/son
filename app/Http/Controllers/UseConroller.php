@@ -118,6 +118,15 @@ class UseConroller extends Controller
      $basvuru->yataygecis=$req->yataygecis;
      $basvuru->dikeygecis=$req->dikeygecis;
      $basvuru->intibak=$req->intibak;
+     if($req->hasfile('dilekce'))
+             {
+                 $file = $req->file('dilekce');
+                 $extenstion = $file->getClientOriginalExtension();
+                 $filename = time().'.'.$extenstion;
+                 $file->move('uploads/dilekce/', $filename);
+                 $basvuru->dilekce = $filename;
+             }
+
      $basvuru->save();
      return redirect('basvurularim');
 
