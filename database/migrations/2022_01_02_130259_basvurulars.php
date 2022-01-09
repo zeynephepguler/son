@@ -15,6 +15,8 @@ class Basvurulars extends Migration
     {
       Schema::create('basvurus', function (Blueprint $table) {
           $table->id();
+          $table->string('basvuru turu',"")->nullable();
+
           $table->string('ogrencino',"")->nullable();
           $table->string('dilekce',"")->nullable();
           $table->string('cap',"")->nullable();

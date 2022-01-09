@@ -1,27 +1,19 @@
 @extends('layouts.admintema')
 @section('content')
-<div class="container">
-  <thead>
-    <th>Ad</th>
-    <th>Soyad</th>
-    <th>Bölüm</th>
-    <th>Belgeler</th>
-    <th>Onayla</th>
-    <th>Reddet</th>
-  </thead>
-  <tbody>
-    @php $i=1; @endphp
-    @forelse($basvurular as $key => $item)
+
+<table border="1">
     <tr>
-      <td>{{$i++}}</td>
-      <td>{{$item['name']}}</td>
+        <td>ogrencino</td>
+        <td>dilekce</td>
     </tr>
-    @empty
+  @foreach ($basvurus as $basvuru)
     <tr>
-      <td colspan="7"> yok </td>
+      <td>{{$basvuru['ogrencino']}}</td>
+      <td><a href="uploads/dilekce/{{$basvuru['dilekce']}}">indir</a></td>
+
     </tr>
-  @endforelse
-  </tbody>
-  </div>
-</div>
+
+  @endforeach
+</table>
+
 @stop

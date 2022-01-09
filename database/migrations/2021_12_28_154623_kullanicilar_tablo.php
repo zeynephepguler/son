@@ -15,17 +15,17 @@ class KullanicilarTablo extends Migration
     {
         Schema::create('kullanis', function (Blueprint $table) {
             $table->id();
-            $table->string('ad');
+            $table->string('ad')->nullable();
             $table->string('no')->unique();
-            $table->string('soyad');
-            $table->string('telefon');
-            $table->string('sifre');
-            $table->string('email');
-            $table->string('adres');
-            $table->string('tc');
-            $table->string('image');
-            $table->string('sinifsec');
-            $table->string('tarih');
+            $table->string('soyad')->nullable();
+            $table->string('telefon')->nullable();
+            $table->string('sifre')->nullable();
+            $table->string('email')->nullable();
+            $table->string('adres')->nullable();
+            $table->string('tc')->nullable();
+            $table->string('image')->nullable();
+            $table->string('sinifsec')->nullable();
+            $table->string('tarih')->nullable();
             $table->timestamps();
         });
 

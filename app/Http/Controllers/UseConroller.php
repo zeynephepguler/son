@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Kullani;
 use App\Models\basvuru;
+use App\Models\kullanis;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Validator, Input, Redirect;
@@ -22,7 +23,11 @@ class UseConroller extends Controller
     return view('layouts.ogrencigiris');
     // code...
   }
+public function goster(){
+$data= basvuru::all();
+return view('layouts.adminbasvurular',['basvurus'=>$data]);
 
+}
 
 
     public function alma (Request $req)
@@ -95,21 +100,77 @@ class UseConroller extends Controller
        return view('layouts.kisiselbilgiler', $data);
 
    }
-   public function basvuru (Request $req)
-   {
-     $ref_tablename='basvurular';
+   public function basvurucap (Request $req){
+     $ref_tablename='basvurular/cap';
      $postData = [
        'ogrNo'=>$req->ogrencino,
        'cap'=>$req->cap,
-       'yazokulu'=>$req->yazokulu,
+
+
+
+
+     ];
+     $postRef = $this->database->getReference($ref_tablename)->push($postData);
+   }
+   public function basvuruyty (Request $req){
+     $ref_tablename='basvurular/yataygecis';
+     $postData = [
+       'ogrNo'=>$req->ogrencino,
        'yataygecis'=>$req->yataygecis,
+
+
+
+
+     ];
+     $postRef = $this->database->getReference($ref_tablename)->push($postData);
+   }
+   public function basvurudgs (Request $req){
+     $ref_tablename='basvurular/dikeygecis';
+     $postData = [
+       'ogrNo'=>$req->ogrencino,
        'dikeygecis'=>$req->dikeygecis,
+
+
+
+
+     ];
+     $postRef = $this->database->getReference($ref_tablename)->push($postData);
+
+   }
+   public function basvuruint (Request $req){
+     $ref_tablename='basvurular/intibak';
+     $postData = [
+       'ogrNo'=>$req->ogrencino,
        'intibak'=>$req->intibak,
 
 
 
      ];
      $postRef = $this->database->getReference($ref_tablename)->push($postData);
+   }
+   public function basvuruyazok (Request $req){
+     $ref_tablename='basvurular/yazokulu';
+     $postData = [
+       'ogrNo'=>$req->ogrencino,
+       'yazokulu'=>$req->yazokulu,
+
+
+
+
+     ];
+     $postRef = $this->database->getReference($ref_tablename)->push($postData);
+
+   }
+   public function basvuru (Request $req)
+   {
+
+
+
+
+
+
+
+
 
      $basvuru = new basvuru();
      $basvuru->ogrencino=$req->ogrencino;
