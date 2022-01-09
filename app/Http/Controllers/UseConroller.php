@@ -165,13 +165,6 @@ return view('layouts.adminbasvurular',['basvurus'=>$data]);
    {
 
 
-
-
-
-
-
-
-
      $basvuru = new basvuru();
      $basvuru->ogrencino=$req->ogrencino;
      $basvuru->cap=$req->cap;
