@@ -63,6 +63,11 @@ Route::get('/kisiselbilgiler', function()
   return view('layouts.kisiselbilgiler');
 });
 
+Route::get('/adminbasvurular', function()
+{
+  return view('layouts.adminbasvurular');
+});
+
 Route::get('/basvurucap', function()
 {
   return view('layouts.basvurucap');

@@ -5,7 +5,7 @@
   </head>
   <body>
       <div >
-        @include('layouts.adminmenü')
+        @include('layouts.adminmenu')
       </div><center>
 
             <div >

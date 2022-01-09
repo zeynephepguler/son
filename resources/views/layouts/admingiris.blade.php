@@ -1,4 +1,4 @@
-@extends('layouts.anasayfadüzen')
+@extends('layouts.anasayfaduzen')
 @section('content')
 <body>
     <link rel="stylesheet" href="{{ asset('css/a.css') }}" type="text/css">

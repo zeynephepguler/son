@@ -10,7 +10,7 @@
     <div >
     <ul >
       <li><a href="#">Ana sayfa</a></li>
-      <li><a href="#">Başvurular</a></li>
+      <li><a href="/adminbasvurular">Başvurular</a></li>
       <li><a href="#">Onaylanan Başvurular</a></li>
       <li><a href="#">Reddedilen Başvurular</a></li>
       <li><a href="#">Adimin yetkileri</a>
