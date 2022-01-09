@@ -37,7 +37,7 @@ class UseConroller extends Controller
         'TelefonNo'=>$req->telefon,
         'adres'=>$req->adres,
         'Tc'=>$req->tc,
-        'Sınıfı'=>$req->sınıfsec,
+        'Sınıfı'=>$req->sinifsec,
 
 
       ];
@@ -52,9 +52,8 @@ class UseConroller extends Controller
       $kullani->telefon=$req->telefon;
       $kullani->adres=$req->adres;
       $kullani->tc=$req->tc;
-      $kullani->sınıfsec=$req->sınıfsec;
-      $kullani->bolum;
-      $kullani->fakulte;
+      $kullani->tarih=$req->tarih;
+      $kullani->sinifsec=$req->sinifsec;
       if($req->hasfile('image'))
               {
                   $file = $req->file('image');

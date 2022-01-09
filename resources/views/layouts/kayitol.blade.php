@@ -30,9 +30,9 @@
         <input name="email" type="email" size="50px" placeholder="E-posta"><br>
         <input name="telefon"type="tel" size="50px" placeholder="Telefon"><br>
         <input name="tc"type="number" pattern=“\d{11} size="50px" placeholder="TC Kimlik"><br>
-        <input type="date" size="50px" placeholder="Doğum Tarihi"><br>
+        <input name="tarih" type="date" size="50px" placeholder="Doğum Tarihi"><br>
         <input name="adres"type="text" size="50px" placeholder="Adres"><br>
-        <select name="sınıfsec">
+        <select name="sinifsec">
         <option> Sınıf Seçiniz </option>
         <option> Hazırlık </option>
         <option> 1.Sınıf </option>

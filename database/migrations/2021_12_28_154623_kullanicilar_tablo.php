@@ -24,10 +24,12 @@ class KullanicilarTablo extends Migration
             $table->string('adres');
             $table->string('tc');
             $table->string('image');
+            $table->string('sinifsec');
+            $table->string('tarih');
             $table->timestamps();
         });
 
-        
+
     }
 
     /**
